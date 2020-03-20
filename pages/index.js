@@ -1,161 +1,73 @@
 import Head from 'next/head'
+import ProductList from '../components/products';
+import { Navbar, Nav, InputGroup, FormControl, Button, Row, Col } from 'react-bootstrap';
 
 const Home = () => (
-  <div className="container">
+  <div>
     <Head>
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
     <main>
-      <h1 className="title">
-        Welcome to <a href="/">Gicungco.Store!</a>
-      </h1>
+      <div className="main">
+        <div className="header shadow-sm bg-white">
+          <Row className="justify-content-md-center">
+            <Col sm="12" xl="8" className="p-0">
+              <Navbar collapseOnSelect expand="lg" variant="light">
+                <Navbar.Brand href="#home">
+                  <span className="logo">
+                    <span id="st">ST</span>
+                    <span id="st-prefix">Sport</span>
+                  </span>
+                </Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                  <Nav>
+                    <Nav.Link href="#deets">Cầu lông</Nav.Link>
+                  </Nav>
+                  <Nav className="ml-auto">
+                    <InputGroup size="sm">
+                      <FormControl
+                        style={{ width: '20rem' }}
+                        placeholder="Tìm kiếm sản phẩm cầu lông..."
+                        aria-label="Recipient's username"
+                        aria-describedby="basic-addon2"
+                      />
+                      <InputGroup.Append>
+                        <Button variant="outline-secondary" className="p-0"><i className="mi md-18 ml-2 mr-2">search</i></Button>
+                      </InputGroup.Append>
+                    </InputGroup>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
+            </Col>
+          </Row>
+        </div>
+        <Row className="justify-content-md-center">
+          <Col sm="12" xl="8" className="p-0">
+            <section className="content">
+              <aside className="sidebar border-right">
+                <div className="nav-side-bar">
+                  <ul>
+                    <li className="active"><a href="#">Vợt</a></li>
+                    <li><a href="#">Balo</a></li>
+                    <li><a href="#">Quần áo</a></li>
+                    <li><a href="#">Quấn cán vợt</a></li>
+                    <li><a href="#">Quấn chân</a></li>
+                    <li><a href="#">Quấn tay</a></li>
+                  </ul>
+                </div>
+              </aside>
+              <div className="content-body bg-light">
+                <div className="child">
+                  <ProductList />
+                </div>
+              </div>
+            </section>
+          </Col>
+        </Row>
+      </div>
     </main>
-
-    <footer>
-    </footer>
-
-    <style jsx>{`
-      .container {
-        min-height: 100vh;
-        padding: 0 0.5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      main {
-        padding: 5rem 0;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer {
-        width: 100%;
-        height: 100px;
-        border-top: 1px solid #eaeaea;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      footer img {
-        margin-left: 0.5rem;
-      }
-
-      footer a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      .title a {
-        color: #0070f3;
-        text-decoration: none;
-      }
-
-      .title a:hover,
-      .title a:focus,
-      .title a:active {
-        text-decoration: underline;
-      }
-
-      .title {
-        margin: 0;
-        line-height: 1.15;
-        font-size: 4rem;
-      }
-
-      .title,
-      .description {
-        text-align: center;
-      }
-
-      .description {
-        line-height: 1.5;
-        font-size: 1.5rem;
-      }
-
-      code {
-        background: #fafafa;
-        border-radius: 5px;
-        padding: 0.75rem;
-        font-size: 1.1rem;
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-      }
-
-      .grid {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        max-width: 800px;
-        margin-top: 3rem;
-      }
-
-      .card {
-        margin: 1rem;
-        flex-basis: 45%;
-        padding: 1.5rem;
-        text-align: left;
-        color: inherit;
-        text-decoration: none;
-        border: 1px solid #eaeaea;
-        border-radius: 10px;
-        transition: color 0.15s ease, border-color 0.15s ease;
-      }
-
-      .card:hover,
-      .card:focus,
-      .card:active {
-        color: #0070f3;
-        border-color: #0070f3;
-      }
-
-      .card h3 {
-        margin: 0 0 1rem 0;
-        font-size: 1.5rem;
-      }
-
-      .card p {
-        margin: 0;
-        font-size: 1.25rem;
-        line-height: 1.5;
-      }
-
-      @media (max-width: 600px) {
-        .grid {
-          width: 100%;
-          flex-direction: column;
-        }
-      }
-    `}</style>
-
-    <style jsx global>{`
-      html,
-      body {
-        padding: 0;
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-    `}</style>
   </div>
 )
 

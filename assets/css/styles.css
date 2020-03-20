@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
+html {
+  font-family: Arial;
+  font-size: 16px;
+}
+.main {
+  position: relative;
+  margin: auto;
+  background-color: lightgrey;
+}
+.main .header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+.main .header nav {
+  position: relative;
+  margin: auto;
+}
+.sidebar {
+  height: 100vh;
+  background: white;
+  font-size: 0.65em;
+  float: left;
+}
+.nav-side-bar {
+  position: relative;
+  text-align: right;
+  top: 63px;
+  font-weight: bold;
+}
+.nav-side-bar ul {
+  list-style: none;
+  width: max-content;
+  padding-left: 20px;
+}
+.nav-side-bar ul li {
+  position: relative;
+  padding: 0 5px;
+  margin: 3.2em 0;
+}
+.nav-side-bar ul li a {
+  line-height: 2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.4em;
+  color: rgba(34, 49, 63, 0.3);
+  display: block;
+  transition: all ease-out 300ms;
+}
+.nav-side-bar ul li.active a {
+  color: #263238;
+  font-size: 120%;
+}
+.nav-side-bar ul li:not(.active)::after {
+  opacity: 0.2;
+}
+.nav-side-bar ul li:not(.active):hover a {
+  color: rgba(34, 49, 63, 0.9);
+}
+.nav-side-bar ul li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: black;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #263238, #607d8b);
+}
+.content {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  margin: auto;
+}
+.content .content-body {
+  top: 63px;
+  float: right;
+  width: 100%;
+}
+.content .content-body .child {
+  position: relative;
+  top: 70px;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+.logo {
+  font-family: "Lobster", cursive;
+  display: flex;
+  align-items: center;
+}
+.logo #st {
+  text-align: center;
+  border-radius: 50%;
+  background-color: #263238;
+  color: white;
+  font-size: 25px;
+  padding: 0px 6px;
+}
+.logo #st-prefix {
+  font-size: 20px;
+  text-decoration: underline;
+  color: #263238;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 767.98px) {
+}
