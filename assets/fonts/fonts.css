@@ -48,10 +48,10 @@
 
 /* Rules for using icons as black on a light background. */
 .mi.md-dark {
-  color: rgba(0, 0, 0, 0.54);
+  color: rgba(0, 0, 0, 0.84);
 }
 .mi.md-dark.md-inactive {
-  color: rgba(0, 0, 0, 0.26);
+  color: rgba(0, 0, 0, 0.44);
 }
 
 /* Rules for using icons as white on a dark background. */

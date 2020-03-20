@@ -10,14 +10,14 @@ const Home = () => (
     </Head>
     <main>
       <div className="main">
-        <div className="header shadow-sm bg-white">
+        <div className="header bg-white shadow-sm">
           <Row className="justify-content-md-center">
             <Col sm="12" xl="8" className="p-0">
-              <Navbar collapseOnSelect expand="lg" variant="light">
+              <Navbar collapseOnSelect expand="lg" variant="light" className="p-0">
                 <Navbar.Brand href="#home">
                   <span className="logo">
-                    <span id="st">ST</span>
-                    <span id="st-prefix">Sport</span>
+                    <span id="st">GiCungCo</span>
+                    <span id="st-prefix">Store</span>
                   </span>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,6 +38,9 @@ const Home = () => (
                       </InputGroup.Append>
                     </InputGroup>
                   </Nav>
+                  <Nav className="ml-3">
+                    <Nav.Link href="#deets"><i className="mi md-24 md-dark">shopping_cart</i></Nav.Link>
+                  </Nav>
                 </Navbar.Collapse>
               </Navbar>
             </Col>
@@ -46,7 +49,7 @@ const Home = () => (
         <Row className="justify-content-md-center">
           <Col sm="12" xl="8" className="p-0">
             <section className="content">
-              <aside className="sidebar border-right">
+              <aside className="sidebar">
                 <div className="nav-side-bar">
                   <ul>
                     <li className="active"><a href="#">Vợt</a></li>
@@ -58,8 +61,8 @@ const Home = () => (
                   </ul>
                 </div>
               </aside>
-              <div className="content-body bg-light">
-                <div className="child">
+              <div className="content-body">
+                <div className="child bg-light">
                   <ProductList />
                 </div>
               </div>

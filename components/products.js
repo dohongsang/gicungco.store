@@ -5,13 +5,10 @@ function ProductList(props) {
   const listItems = numbers.map((number) =>
     <Col sm="6" xl="4" className="p-2">
       <Card className="shadow-sm">
-        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Img variant="top" src={number.image} />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in to
-            additional content. This content is a little bit longer.
-        </Card.Text>
+          <Card.Title className="h6">{number.name}</Card.Title>
+          <Card.Text className="small">{number.description}</Card.Text>
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>
@@ -24,7 +21,39 @@ function ProductList(props) {
   );
 }
 
-const numbers = [1, 2, 3, 4, 5];
+const numbers = [{
+  name: "Quấn cán cầu lông",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/89198936_501975514080706_8672999835030257664_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=451crIpm6REAX-kEdtj&_nc_ht=scontent-hkt1-1.xx&oh=02a0176c1df62602374451c4695f1d69&oe=5E9A6BAB",
+  description: "Quấn cán cầu lông #12K <10 cái #10K >10 cái - Có lỗ kim thoáng khí, thấm hút mồ hôi cực tốt. - Cầm lên tay rất êm,bám tay và chống trơn trượt."
+},{
+  name: "ÁO VICTOR NAM NỮ",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/87947653_497255121219412_7397167623521173504_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=i0D5ie8B8-YAX8kLLrW&_nc_ht=scontent-hkt1-1.xx&oh=28d84b0dc2e2bf1a5a325bde1d59d019&oe=5E9A42DE",
+  description: "Chất vải thun lạnh, dày dặn. \nCó đủ size cho Nam Nữ cả nhà nhé. \nGiá iu thương #135k"
+},{
+  name: "Quấn cán cầu lông",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/89198936_501975514080706_8672999835030257664_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=451crIpm6REAX-kEdtj&_nc_ht=scontent-hkt1-1.xx&oh=02a0176c1df62602374451c4695f1d69&oe=5E9A6BAB",
+  description: "Quấn cán cầu lông #12K <10 cái #10K >10 cái - Có lỗ kim thoáng khí, thấm hút mồ hôi cực tốt. - Cầm lên tay rất êm,bám tay và chống trơn trượt."
+},{
+  name: "ÁO VICTOR NAM NỮ",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/87947653_497255121219412_7397167623521173504_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=i0D5ie8B8-YAX8kLLrW&_nc_ht=scontent-hkt1-1.xx&oh=28d84b0dc2e2bf1a5a325bde1d59d019&oe=5E9A42DE",
+  description: "Chất vải thun lạnh, dày dặn. \nCó đủ size cho Nam Nữ cả nhà nhé. \nGiá iu thương #135k"
+},{
+  name: "Quấn cán cầu lông",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/89198936_501975514080706_8672999835030257664_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=451crIpm6REAX-kEdtj&_nc_ht=scontent-hkt1-1.xx&oh=02a0176c1df62602374451c4695f1d69&oe=5E9A6BAB",
+  description: "Quấn cán cầu lông #12K <10 cái #10K >10 cái - Có lỗ kim thoáng khí, thấm hút mồ hôi cực tốt. - Cầm lên tay rất êm,bám tay và chống trơn trượt."
+},{
+  name: "ÁO VICTOR NAM NỮ",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/87947653_497255121219412_7397167623521173504_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=i0D5ie8B8-YAX8kLLrW&_nc_ht=scontent-hkt1-1.xx&oh=28d84b0dc2e2bf1a5a325bde1d59d019&oe=5E9A42DE",
+  description: "Chất vải thun lạnh, dày dặn. \nCó đủ size cho Nam Nữ cả nhà nhé. \nGiá iu thương #135k"
+},{
+  name: "Quấn cán cầu lông",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/89198936_501975514080706_8672999835030257664_o.jpg?_nc_cat=106&_nc_sid=110474&_nc_ohc=451crIpm6REAX-kEdtj&_nc_ht=scontent-hkt1-1.xx&oh=02a0176c1df62602374451c4695f1d69&oe=5E9A6BAB",
+  description: "Quấn cán cầu lông #12K <10 cái #10K >10 cái - Có lỗ kim thoáng khí, thấm hút mồ hôi cực tốt. - Cầm lên tay rất êm,bám tay và chống trơn trượt."
+},{
+  name: "ÁO VICTOR NAM NỮ",
+  image: "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.0-9/87947653_497255121219412_7397167623521173504_n.jpg?_nc_cat=105&_nc_sid=110474&_nc_ohc=i0D5ie8B8-YAX8kLLrW&_nc_ht=scontent-hkt1-1.xx&oh=28d84b0dc2e2bf1a5a325bde1d59d019&oe=5E9A42DE",
+  description: "Chất vải thun lạnh, dày dặn. \nCó đủ size cho Nam Nữ cả nhà nhé. \nGiá iu thương #135k"
+},];
 const Products = () => (
   <ProductList numbers={numbers}></ProductList>
 )
