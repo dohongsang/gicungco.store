@@ -5,14 +5,14 @@ import { Navbar, Nav, InputGroup, FormControl, Button, Row, Col } from 'react-bo
 const Home = () => (
   <div>
     <Head>
-      <title>Create Next App</title>
+      <title>Chuyên dụng cụ cầu lông</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <main>
       <div className="main">
         <div className="header bg-white shadow-sm">
-          <Row className="justify-content-md-center">
-            <Col sm="12" xl="8" className="p-0">
+          <Row className="justify-content-md-center m-0">
+            <Col sm="12" lg="10" xl="9">
               <Navbar collapseOnSelect expand="lg" variant="light" className="p-0">
                 <Navbar.Brand href="#home">
                   <span className="logo">
@@ -46,8 +46,8 @@ const Home = () => (
             </Col>
           </Row>
         </div>
-        <Row className="justify-content-md-center">
-          <Col sm="12" xl="8" className="p-0">
+        <Row className="justify-content-md-center m-0">
+          <Col sm="12" lg="10" xl="9" className="p-0 shadow">
             <section className="content">
               <aside className="sidebar">
                 <div className="nav-side-bar">
@@ -62,11 +62,46 @@ const Home = () => (
                 </div>
               </aside>
               <div className="content-body">
-                <div className="child bg-light">
+                <div className="child">
                   <ProductList />
                 </div>
               </div>
             </section>
+            <footer className="bg-light">
+              <div className="container">
+                <Row className="justify-content-between">
+                  <Col>
+                    <div className="p-4">
+                      <span className="logo">
+                        <span id="st">GiCungCo</span>
+                        <span id="st-prefix">Store</span>
+                      </span>
+                      <span className="text-primary name-logo">Dụng cụ thể thao - cầu lông</span>
+                      <div className="about-us">
+                        <br />
+                        <h6>Về chúng tôi</h6>
+                        <p>Chuyên đồ cầu lông như vợt, quấn cán, quần áo.Mặt hàng đa dạng, mẫu mã phong phú. Hàng hóa đảm bảo uy tín và chất lượng</p>
+                        <br />
+                        <h6>Liên hệ</h6>
+                        <div className="d-flex align-items-center">
+                          <i className="mi md-18">smartphone</i>
+                          <div className="phone">0349685808 - 0349691183</div>
+                        </div>
+                        <div className="d-flex align-items-center">
+                          <i className="mi md-18">place</i>
+                          <div className="address">22/14 Phan Văn Hớn, phường Tân Thới Nhất, Quận 12</div>
+                        </div>
+                      </div>
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className="p-4 text-right">
+                    <div className="fb-page" data-href="https://www.facebook.com/G&#xec;-C&#x169;ng-C&#xf3;-Chuy&#xea;n-c&#x1ea7;u-l&#xf4;ng-257923138485946/" data-tabs="" data-width="" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/G&#xec;-C&#x169;ng-C&#xf3;-Chuy&#xea;n-c&#x1ea7;u-l&#xf4;ng-257923138485946/" className="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/G&#xec;-C&#x169;ng-C&#xf3;-Chuy&#xea;n-c&#x1ea7;u-l&#xf4;ng-257923138485946/">Gì Cũng Có - Chuyên cầu lông</a></blockquote></div>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
+            </footer>
           </Col>
         </Row>
       </div>

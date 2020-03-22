@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 html {
-  font-family: Arial;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 16px;
 }
 .main {
@@ -20,15 +20,16 @@ html {
   margin: auto;
 }
 .sidebar {
-  height: 100vh;
   background: white;
   font-size: 0.65em;
   float: left;
 }
 .nav-side-bar {
-  position: relative;
-  top: 53px;
+  position: sticky;
+  top: 73px;
   font-weight: bold;
+  max-width: 500px;
+  transition: max-width 300ms;
 }
 .nav-side-bar ul {
   list-style: none;
@@ -46,7 +47,7 @@ html {
   color: rgba(34, 49, 63, 0.3);
   display: block;
   transition: all ease-out 300ms;
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Lobster", cursive;
   font-size: 150%;
   padding-left: 10px;
   padding-right: 3rem;
@@ -64,8 +65,9 @@ html {
 }
 .content {
   display: flex;
+  align-items: stretch;
   width: 100%;
-  height: 100vh;
+  height: max-content;
   margin: auto;
 }
 .content .content-body {
@@ -74,10 +76,9 @@ html {
   width: 100%;
 }
 .content .content-body .child {
-  position: relative;
-  top: 53px;
-  overflow-y: scroll;
+  overflow: hidden;
   padding: 1rem;
+  padding-top: 63px;
 }
 .logo {
   font-family: "Lobster", cursive;
@@ -96,12 +97,46 @@ html {
   font-size: 25px;
   color: #263238;
 }
+.name-logo {
+  font-family: "Lobster", cursive;
+  font-size: 15px;
+  font-style: italic;
+}
+.about-us h6 {
+  font-family: "Lobster", cursive;
+  font-size: 15px;
+  color: #263238;
+}
+.about-us p {
+  font-size: 12px;
+  color: #263238;
+  margin-bottom: 0;
+}
+.about-us .phone {
+  font-size: 15px;
+  color: #263238;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+.about-us .address {
+  font-size: 15px;
+  color: #263238;
+  margin-bottom: 0;
+  line-height: 1;
+}
 .center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 
 @media (max-width: 767.98px) {
+  .nav-side-bar {
+    max-width: 0px;
+  }
 }
