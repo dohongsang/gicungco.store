@@ -15,16 +15,13 @@ const Home = () => (
             <Col sm="12" lg="10" xl="9">
               <Navbar collapseOnSelect expand="lg" variant="light" className="p-0">
                 <Navbar.Brand href="#home">
-                  <span className="logo">
-                    <span id="st">GiCungCo</span>
-                    <span id="st-prefix">Store</span>
-                  </span>
+                  <img src="logo.png" width="100"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
-                  <Nav>
+                  {/* <Nav>
                     <Nav.Link href="#deets">Cầu lông</Nav.Link>
-                  </Nav>
+                  </Nav> */}
                   <Nav className="ml-auto">
                     <InputGroup size="sm">
                       <FormControl
