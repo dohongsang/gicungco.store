@@ -1,0 +1,24 @@
+version: '3.6'
+services:
+  postgres:
+    image: postgres:12
+    restart: always
+    volumes:
+    - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: 7e1e199f4d0593c6fd4e9ed2cdd62b6b7bc0932857f281a03d712d74d8a5a126
+  graphql-engine:
+    image: hasura/graphql-engine:v1.1.1
+    ports:
+    - "8080:8080"
+    depends_on:
+    - "postgres"
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: postgres://fnqhqvwmixkkut:7e1e199f4d0593c6fd4e9ed2cdd62b6b7bc0932857f281a03d712d74d8a5a126@ec2-18-209-187-54.compute-1.amazonaws.com:5432/dfdes0unisk04t
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ## uncomment next line to set an admin secret
+      HASURA_GRAPHQL_ADMIN_SECRET: 7e1e199f4d0593c6fd4e9ed2cdd62b6b7bc0932857f281a03d712d74d8a5a126
+volumes:
+  db_data:
